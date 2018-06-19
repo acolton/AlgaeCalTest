@@ -145,13 +145,12 @@ img {
 #videoOverlay {
   background: rgba(0, 0, 0, 0);
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 10%;
+  left: 30%;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  max-width: 100%; }
 
 #nutrition {
   margin: 30px 0px 10px 0px; }
