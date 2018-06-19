@@ -1,0 +1,285 @@
+// Style.scss
+
+@font-face {
+  font-family: 'globerThin';
+  src: url('../fonts/Glober_Thin_Free-webfont.eot')!important; /* IE9 Compat Modes */
+  src: url('../fonts/Glober_Thin_Free-webfont.woff2') format('woff2')!important, /* Super Modern Browsers */
+       url('../fonts/Glober_Thin_Free-webfont.woff') format('woff')!important, /* Pretty Modern Browsers */
+       url('../fonts/Glober_Thin_Free-webfont.ttf') format('truetype')!important; /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'globerBold';
+  src: url('../fonts/Glober_Bold_Free-webfont.eot')!important; /* IE9 Compat Modes */
+  src: url('../fonts/Glober_Bold_Free-webfont.woff2') format('woff2')!important, /* Super Modern Browsers */
+       url('../fonts/Glober_Bold_Free-webfont.woff') format('woff')!important, /* Pretty Modern Browsers */
+       url('../fonts/Glober_Bold_Free-webfont.ttf') format('truetype')!important; /* Safari, Android, iOS */
+}
+
+$font-stack: 'globerBold', Roboto, san-serif;
+$font-stack-thin: 'globerThin', Roboto, san-serif;
+$standard-margin: 10px 0px 10px 0px;
+$shadow: 0px 0px 8px #888888;
+
+// Color Definitions
+$dkBlue: #008ba4;
+$ltBlue: #54b8cd;
+$orange: #e79544;
+$dkGreen: #25875b;
+$ltGreen: #39a440;
+$black: #000;
+$white: #fff;
+$grey: #999;
+
+
+body{
+  font-family: $font-stack;
+  color: $black;
+  overflow-x: hidden;
+}
+
+// Text Formatting
+h1 {
+  font-family: $font-stack;
+	font-size: 20pt;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: $font-stack-thin;
+	font-size: 14pt;
+  font-weight: lighter;
+}
+
+h3 {
+  font-family: $font-stack;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+h4 {
+  font-family: $font-stack;
+	font-size: 12pt;
+	font-weight: bold;
+	}
+
+p {
+  font-family: $font-stack-thin;
+	font-size: 12pt;
+	font-weight: lighter;
+	}
+
+// Text Classes
+.bold {
+  font-family: $font-stack;
+	font-size: 14pt;
+  font-weight: bold;
+}
+
+.blue {color: $dkBlue;}
+
+.orange {color: $orange;}
+
+.white {color: $white;}
+
+.grey {
+  color: $grey;
+  font-family: $font-stack;
+}
+
+.usd {
+	font-size: 10pt;
+	text-decoration: underline;
+  vertical-align: middle;
+}
+.small {
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+.nutritionTable {
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+// Underlines and Highlights
+.redUnderline {
+	font-size: 29pt;
+	background-image: url("../images/red-underline.png");
+	background-repeat: repeat-x;
+  background-position: left bottom;
+  padding-bottom: -2px;
+}
+
+.yellowHighlight {
+	background-image: url("../images/yellow-highlight.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* Link Formatting */
+a:link {
+	color: $dkBlue;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: $ltBlue;
+	text-decoration: underline;
+}
+
+footer a:link {
+	color: $grey;
+	text-decoration: none;
+}
+
+// Div formatting in order of appearance
+header {padding: 10px;}
+
+header a:link {
+	color: $ltBlue;
+	text-decoration: none;
+}
+
+div.greenBox {
+  background-image: url("../images/green-background.png");
+	background-color: #4c813d;
+	align-items: center;
+	padding: 10px;
+	margin: 0px 0px 15px 0px;
+}
+
+div.orangeCircle {
+	position: relative;
+	left: 80%;
+	top: 10%;
+	margin: 0px;
+}
+
+div.bundles {
+	margin-left: 15px;
+  margin-bottom: 15px;
+	background-color: $white;
+	width: 90%;
+	padding: 10px;
+	box-shadow: 0px 0px 8px #888888;
+	text-align: center;
+}
+
+div.featuredBundle {
+	margin-left: 15px;
+	background-color: $dkBlue;
+	width: 90%;
+	align-items: center;
+	padding: 2%;
+	box-shadow: $shadow;
+	text-align: center;
+}
+
+img {max-width: 100%;}
+
+#videoBox{
+ position: relative;
+}
+#videoOverlay {
+  background: rgba(0,0,0,0);
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#nutrition {margin: 30px 0px 10px 0px;}
+
+#guarantee {
+	width: 94%;
+	margin: 10px;
+	border: 20px solid transparent;
+	padding: 15px;
+	border-image: url("../images/green-background.png") 30 round;
+  border-color: $white;
+	repeat: none;
+	background-color: $white;
+}
+
+//Nutrition table formatting
+table {
+	border: 3px solid black;
+	margin: 0px 0px 20px 0px;
+}
+
+th, td {
+	padding: 5px 15px 5px 15px;
+  vertical-align: center;
+}
+
+hr {
+	display: block;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: solid;
+	border-color: $black;
+	border-width: 10px;
+}
+
+hr.thin {border-width: 5px;}
+
+.floatRight {float: right;}
+
+// Add to Cart and Buy Now buttons
+.button {
+	position: relative;
+  width: 155px;
+  height: 40px;
+    font-family: $font-stack;
+  font-size: 17px;
+  text-align: right;
+  color: $white;
+  background-color: $ltGreen;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px $dkGreen;
+	margin: 20px 20px 20px 40px;
+}
+
+.btnimg {
+  position: absolute;
+	width: 75px;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// Lines for Introduction text
+.hr-sect {
+	display: flex;
+	flex-basis: 100%;
+	align-items: center;
+	color: rgba(0, 0, 0, 0.35);
+	margin: 8px 0px;
+}
+
+.hr-sect::before,
+.hr-sect::after {
+	content: "";
+	flex-grow: 1;
+	background: $white;
+	height: 2px;
+	font-size: 0px;
+	line-height: 0px;
+	margin: 0px 8px 14px;
+}
+
+// List formatting for References */
+.referenceText ol {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.referenceText li {
+  text-align: left;
+
+}
